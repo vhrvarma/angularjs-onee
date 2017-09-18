@@ -1,4 +1,4 @@
-        app.controller("myController",function($scope){
+        app.controller("myController",['$scope',function($scope){
             $scope.tech=[
                 {name:"C#",likes:0,dislikes:0},
                 {name:".NET",likes:0,dislikes:0},
@@ -14,7 +14,7 @@
             }
             $scope.rowLimit=4;
             $scope.sortColumn="-name";
-        });
+        }]);
 
 app.controller('myCtrl', ['$scope', function($scope) {
     $scope.count = 0;

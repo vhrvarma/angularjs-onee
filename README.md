@@ -1,1 +1,1 @@
-# mean
+# this is about angularjs.

@@ -9,8 +9,26 @@ var usersSchema = new Schema({
     password: String
 });
 
+var studentSchema= new Schema({
+	name:String,
+	age:Number,
+	location:String
+});
+
+var teacherSchema= new Schema({
+	name:String,
+	age:Number,
+	location:String
+});
+
+var studentColl = mongoose.model("students",studentSchema);
+var teacherColl = mongoose.model("teachers",teacherSchema);
+
+
 var UsersCollection = mongoose.model('users', usersSchema);
 
 module.exports = {
-    UsersColl: UsersCollection
+    UsersColl: UsersCollection,
+    students: studentColl,
+	teachers: teacherColl
 };

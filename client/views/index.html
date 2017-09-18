@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="components/bootstrap/dist/css/bootstrap.css">	
+    <base href="/">
 </head>
 <body ng-app="myModule">
 
@@ -25,15 +26,16 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#/home">Home</a></li>
-                <li><a href="#/about">About</a></li>
+                <li><a ui-sref="home">Home</a></li>
+                <li><a ui-sref="about">About</a></li>
             </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>
+<div ui-view>
+</div>
 
-
-<div ng-app="" ng-init="firstName='John'">
+<div ng-init="firstName='John'">
        <p>Name: <input type="text" ng-model="firstName"></p>
        <p>You wrote: {{ firstName }}</p>
    </div>
@@ -86,11 +88,16 @@
 <script type="text/javascript" src="components/jquery/dist/jquery.min.js"></script>
 <script type="text/javascript" src="components/bootstrap/dist/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="components/angular/angular.min.js"></script>
-<script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript" src="components/angular-ui-router/release/angular-ui-router.js"></script>
 
 <script type="text/javascript" src="js/app.js"></script>
 <script type="text/javascript" src="js/controllers/controller.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28//angular-route.min.js"></script>
+<script type="text/javascript" src="js/controllers/home-controller.js"></script>
+<script type="text/javascript" src="js/controllers/about-controller.js"></script>
+
+
+
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28//angular-route.min.js"></script> -->
 
 
 

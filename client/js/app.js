@@ -1,5 +1,24 @@
-var app=angular.module("myModule",[]);
+var app=angular.module("myModule",['ui.router']);
+  app.config(function ($stateProvider, $urlRouterProvider,$locationProvider) {
 
-// routing
+  	
+  	 $locationProvider.html5Mode(true);
+  	 $locationProvider.hashPrefix('');
 
-//var mainApp = angular.module("mainApp", ['ngRoute']);
+     $urlRouterProvider.when("", "/home");
+     $urlRouterProvider.otherwise("/home");
+
+     $stateProvider
+        .state("home", {
+            url: "/home",
+            templateUrl: "views/home.html"
+        })
+        .state("about", {
+            url:"/about",
+            templateUrl: "views/about.html"
+        })
+        
+
+        
+});
+
